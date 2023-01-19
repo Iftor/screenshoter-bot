@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 
-from app import settings
+from bot_app import settings
 
 
 class FileWriter:

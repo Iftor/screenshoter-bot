@@ -1,8 +1,8 @@
 import telebot
 from telebot.types import Message
 
-from app import settings
-from app.src.core import ScreenshotMaker
+from bot_app import settings
+from bot_app.src.core import ScreenshotMaker
 
 
 bot = telebot.TeleBot(settings.BOT_TOKEN)

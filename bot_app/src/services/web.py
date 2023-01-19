@@ -2,7 +2,7 @@ from urllib.parse import urlparse
 
 import requests
 
-from app import settings
+from bot_app import settings
 
 
 class Requester:

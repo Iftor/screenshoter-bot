@@ -1,8 +1,8 @@
 from typing import Tuple
 
-from app.src.services.data import DataParser
-from app.src.services.files import FileWriter
-from app.src.services.web import Requester, LinkModifier
+from bot_app.src.services.data import DataParser
+from bot_app.src.services.files import FileWriter
+from bot_app.src.services.web import Requester, LinkModifier
 
 
 class ScreenshotMaker:

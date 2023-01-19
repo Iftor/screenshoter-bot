@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from app.src.services.data import DataParser
+from bot_app.src.services.data import DataParser
 
 
 class TestDataParser:

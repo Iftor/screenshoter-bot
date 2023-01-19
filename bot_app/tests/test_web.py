@@ -1,4 +1,4 @@
-from app.src.services.web import Requester, LinkModifier
+from bot_app.src.services.web import Requester, LinkModifier
 
 
 class TestRequester:
