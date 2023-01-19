@@ -36,3 +36,6 @@ class TestLinkModifier:
     def test_cut_url(self):
         assert LinkModifier.cut_url('www.qq.com/home/tables', 20) == 'www.qq.com/home/tabl'
         assert LinkModifier.cut_url('www.qq.com/home/tables', 30) == 'www.qq.com/home/tables'
+
+    def test_replace_slashes(self):
+        assert LinkModifier.replace_slashes('qqq.ru/xxx/yyy/') == 'qqq.ru@xxx@yyy@'

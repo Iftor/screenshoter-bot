@@ -60,3 +60,7 @@ class LinkModifier:
             return url[:max_length]
 
         return url
+
+    @staticmethod
+    def replace_slashes(url: str) -> str:
+        return url.replace('/', '@')

@@ -16,7 +16,7 @@ class ScreenshotMaker:
         self._screenshot_format = self._ImageFormats.JPEG
         self._page_url_full = None
         self._page_url_short = None
-        self._page_url_cut = None
+        self._page_url_for_filename = None
         self._requester = None
         self._data_parser = None
         self._screenshot_saver = None
@@ -33,9 +33,9 @@ class ScreenshotMaker:
     def _init_page_url_types(self):
         self._page_url_full = LinkModifier.adjust_url(self._message_text)
         self._page_url_short = LinkModifier.remove_scheme(self._page_url_full)
-        self._page_url_cut = LinkModifier.cut_url(self._page_url_short, 40)
+        self._page_url_for_filename = LinkModifier.replace_slashes(LinkModifier.cut_url(self._page_url_short, 40))
 
     def _init_services(self):
         self._requester = Requester(self._page_url_full, self._screenshot_format)
         self._data_parser = DataParser(self._screenshot_format)
-        self._screenshot_saver = FileWriter(self._page_url_cut, self._screenshot_format)
+        self._screenshot_saver = FileWriter(self._page_url_for_filename, self._screenshot_format)

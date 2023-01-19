@@ -12,7 +12,7 @@ class TestFileWriter:
         fake_now = datetime(year=2023, month=1, day=1, hour=0, minute=0)
         with patch('bot_app.src.services.files.datetime') as mock_datetime:
             mock_datetime.now = Mock(return_value=fake_now)
-            assert self.test_file_writer._get_filename() == '2023-01-01_00.00_link.jpeg'
+            assert self.test_file_writer._get_filename() == '2023-01-01_00:00_test_url.jpeg'
 
     def test_get_file_path(self):
         self.test_file_writer._save_path = './dir'
