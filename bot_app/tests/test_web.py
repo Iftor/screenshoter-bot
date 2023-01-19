@@ -8,7 +8,7 @@ class TestRequester:
 
     def test_get_request_url(self):
         self.test_requester._splash_port = '8888'
-        assert self.test_requester._get_request_url() == f'http://localhost:8888/render.json'
+        assert self.test_requester._get_request_url() == f'http://splash:8888/render.json'
 
     def test_get_request_params(self):
         params = {
@@ -16,7 +16,7 @@ class TestRequester:
             'jpeg': 1,
             'url': 'test_url',
             'wait': 1,
-            'render_all': '1',
+            'render_all': 1,
         }
         assert self.test_requester._get_request_params() == params
 

@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  bot:
+    build: .
+    volumes:
+      - type: bind
+        source: ${SAVE_PATH}
+        target: /app/bot_app/screenshots
+  splash:
+    image: scrapinghub/splash
+    ports:
+      - "8050:${SPLASH_PORT}"
+    logging:
+      driver: none

@@ -21,7 +21,7 @@ class Requester:
         return response.content
 
     def _get_request_url(self) -> str:
-        return f'http://localhost:{self._splash_port}/render.json'
+        return f'http://splash:{self._splash_port}/render.json'
 
     def _get_request_params(self) -> dict:
         return {
